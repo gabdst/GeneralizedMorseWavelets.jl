@@ -7,9 +7,11 @@ e.g. (Lilly and Olhede 2012)) and their derivatives.
 
 The first order Generalized Morse Wavelets are defined in frequency by:
 
-$$
+```math
 \widehat{\psi}_{a,u,\beta,\gamma}(w) = C_{a,\beta,\gamma}\, (aw)^\beta \exp \left( -(aw)^\gamma -iwu \right)
-$$ where $C_{a,\beta,\gamma}$ is a normalization constant, usually a L2
+```
+
+where $C_{a,\beta,\gamma}$ is a normalization constant, usually a L2
 normalization or a frequency peak normalization, $a$ and $u$ are scaling
 and translation parameters and $\beta$ and $\gamma$ are shape
 parameters.
@@ -23,9 +25,12 @@ good localization in time-frequency space, almost a gaussian-like
 localisation, see (Lilly and Olhede 2012) and references therein).
 
 The wavelet coefficient of a signal $x$ at scale $a$ and time $u$ is
-then simply computed using: $$
+then simply computed using: 
+
+```math
 \tilde{x}[a,u] = \langle x,\psi_{a,u,\beta,\gamma} \rangle
-$$ where $\psi_{a,u,\beta,\gamma}$ is the wavelet in time.
+```
+where $\psi_{a,u,\beta,\gamma}$ is the wavelet in time.
 
 This package also provide Generalized Morse Wavelets at higher order,
 although their use is more limited as their properties in frequency are
@@ -58,9 +63,7 @@ handy function `gmw_grid` to initialize a bank of Generalized Morse
 Wavelets whose frequency peaks are logarithmically positionned in
 frequency.
 
-With the scales $a_i$ defined by $$
-a_i=a_02^{i/Q},\, \forall i=0\dots JQ-1
-$$ where $J$ is the number of octaves and $Q$ the number of
+With the scales $a_i$ defined by $$a_i=a_02^{i/Q},\, \forall i=0\dots JQ-1$$ where $J$ is the number of octaves and $Q$ the number of
 inter-octaves, $a_0$ the initial lowest scale such that the highest
 frequency peak is positionned at $w_\mathrm{max}$.
 
@@ -77,9 +80,7 @@ g=gmw(0,g_params[1]...,N,normalization) # Get the first wavelet of the bank (g_p
 ```
 
 The resulting bank of wavelets have their frequency peaks $w_i$
-positionned at: $$
-w_i=w_\mathrm{max}2^{-i/Q},\, \forall i=0\dots JQ-1
-$$ If a minimum frequency threshold $w_\mathrm{min}$ is specified, all
+positionned at: $$w_i=w_\mathrm{max}2^{-i/Q},\, \forall i=0\dots JQ-1$$ If a minimum frequency threshold $w_\mathrm{min}$ is specified, all
 wavelets with frequency peaks below this threshold are removed from the
 bank of filters resulting in a bank of size less than `JQ`.
 
