@@ -104,9 +104,12 @@ end
 w_psi(β,γ) = exp(log(β/γ)/γ)
 a_for_wpsi(wpsi,β,γ) = exp((log(β)-log(γ))/γ - log(wpsi))
 peak_w(a,β,γ)= w_psi(β,γ)/a
+peak_w(g_params) = peak_w(g_params[1],g_params[3],g_params[4])
 logpeak_w(a,β,γ)= (log(β)-log(γ))/γ - log(a)
 peak_n(a,β,γ,n) = peak_w(a,β,γ)*n/(2*pi)
+peak_n(g_params,n) = peak_n(g_params[1],g_params[3],g_params[4],n)
 duration(β,γ) = sqrt(β*γ)
+duration(g_params) = duration(g_params[3],g_params[4])
 
 
 """
