@@ -1,5 +1,4 @@
 using SpecialFunctions
-using FFTW
 using LinearAlgebra
 # See "Generalized Morse Wavelets", Sofia C. Olhede, Andrew T. Walden, IEEE Transactions on signal processing, 2002
 
