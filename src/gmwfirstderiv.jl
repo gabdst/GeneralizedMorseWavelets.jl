@@ -72,7 +72,7 @@ end
 
 function u_derivative(g,k,a,u,β,γ,N,normalization)
   M=length(g)
-  return -Complex.(0,wdomain(1,N,M)).*g
+  return -1im*wdomain(1,N,M).*g
 end
 
 function w_derivative(g,k,a,u,β,γ,N,normalization)
